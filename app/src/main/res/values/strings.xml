@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">MusicalStructure</string>
+    <string name="page_title">Home</string>
+    <string name="trending_songs">Trending Songs</string>
+    <string name="suggestions_for_you">Suggestions for you</string>
+    <string name="playing_now">Playing Now...</string>
+    <string name="saved_songs">Saved Songs</string>
+    <string name="artist_name">Artist Name</string>
+    <string name="song_name">Song Name</string>
+    <string name="separator">-</string>
+    <string name="trending_songs_title">Trending Songs</string>
+    <string name="suggestions_for_you_title">Suggestions for you</string>
+    <string name="saved_songs_title">Saved Songs</string>
+    <string name="playing_now_title">Playing Now</string>
+    <string name="artist_name_playing">Artist Name</string>
+    <string name="song_name_playing">Song Name</string>
+</resources>

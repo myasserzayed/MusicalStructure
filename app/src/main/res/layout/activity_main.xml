@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/page_title_txt_color">
+
+        <TextView
+            android:id="@+id/page_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_header"
+            android:background="@color/page_title_bg_color"
+            android:fontFamily="cursive"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/page_title"
+            android:textColor="@color/topic_bg_color"
+            android:textSize="@dimen/header_font_size"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/trending"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_topic"
+            android:layout_marginLeft="@dimen/margin10"
+            android:layout_marginRight="@dimen/margin10"
+            android:background="@drawable/btn_shape"
+            android:fontFamily="cursive"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/trending_songs"
+            android:textColor="@color/topic_bg_color"
+            android:textSize="@dimen/topic_txt_size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/trending_RV"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/page_title" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/trending_RV"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_RV"
+            app:layout_constraintBottom_toTopOf="@id/suggestions"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/trending" />
+
+        <TextView
+            android:id="@+id/suggestions"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_topic"
+            android:layout_marginLeft="@dimen/margin10"
+            android:layout_marginRight="@dimen/margin10"
+            android:background="@drawable/btn_shape"
+            android:fontFamily="cursive"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/suggestions_for_you"
+            android:textColor="@color/topic_bg_color"
+            android:textSize="@dimen/topic_txt_size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/suggestions_RV"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/trending_RV" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/suggestions_RV"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_RV"
+            app:layout_constraintBottom_toTopOf="@id/saved_btn"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/suggestions" />
+
+        <ImageView
+            android:id="@+id/home_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin10"
+            android:background="@color/page_title_bg_color"
+            android:src="@drawable/ic_home_white_40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/saved_btn"
+            app:layout_constraintTop_toBottomOf="@id/suggestions_RV" />
+
+        <ImageView
+            android:id="@+id/saved_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin10"
+            android:background="@color/page_title_bg_color"
+            android:src="@drawable/ic_library_music_40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/home_btn"
+            app:layout_constraintRight_toLeftOf="@id/play_now_btn"
+            app:layout_constraintTop_toBottomOf="@id/suggestions_RV" />
+
+        <ImageView
+            android:id="@+id/play_now_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin10"
+            android:background="@color/page_title_bg_color"
+            android:src="@drawable/ic_play_arrow_white_40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/saved_btn"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/suggestions_RV" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
